@@ -1,0 +1,115 @@
+body{
+    padding-top: 100px;
+}
+header{
+    background-color: rgb(240, 240, 240);
+    padding: 5px;
+}
+
+
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+.profile-card {
+    width: 250px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+  }
+  .profile-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Gaya background profil */
+  .profile-bg {
+    background-image: url('/public/asset/hero-half.jpg');
+    background-size: cover;
+    height: 150px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Gaya foto profil */
+  .profile-img {
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  
+  /* Gaya nama pengguna */
+  .profile-name {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  /* Gaya alamat email */
+  .profile-email {
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  /* Gaya tombol Edit Profil */
+  .btn-profile {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .btn-profile:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Gaya tombol Logout */
+  .btn-logout {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-logout:hover {
+    background-color: #c82333;
+  }

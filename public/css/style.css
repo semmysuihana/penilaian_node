@@ -1,0 +1,90 @@
+body{
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+main{
+  overflow-x: hidden;
+  
+}
+body,
+button {
+  font-family: "Inter", sans-serif;
+
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+
+
+.offcanvas-body {
+  transition: transform 0.3s ease;
+}
+
+.offcanvas.show {
+  transform: translateX(0);
+}
+.nav-link:hover {
+  background-color: #343a40;
+}
+.nav-link .bi {
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .bi {
+  transform: rotate(360deg);
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6c757d;
+}
+.dropdown-divider:hover {
+  background-color: #6c757d;
+}
+.info{
+  border-radius: 5px;
+}
+.color-purple{
+  background: #cc01ff;
+  color: white;
+}
+.color-tomato{
+  background: tomato;
+  color: white;
+}
